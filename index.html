@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>To-Do List</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-tasks"></i> ProductiveDay</h1>
+            <p>Organize your tasks and boost your productivity</p>
+        </header>
+        
+        <div class="stats">
+            <div>
+                <span id="totalTasks">0</span>
+                Total
+            </div>
+            <div>
+                <span id="completedTasks">0</span>
+                Completed
+            </div>
+            <div>
+                <span id="pendingTasks">0</span>
+                Pending
+            </div>
+        </div>
+        
+        <div class="input-section">
+            <div class="input-group">
+                <input type="text" id="taskInput" placeholder="What needs to be done?">
+                <button id="addBtn"><i class="fas fa-plus"></i> Add</button>
+            </div>
+        </div>
+        
+        <div class="filter-section">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="pending">Pending</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+        
+        <ul class="task-list" id="taskList">
+            <!-- Tasks will be added here dynamically -->
+        </ul>
+        
+        <div class="empty-state" id="emptyState">
+            <i class="fas fa-clipboard-list"></i>
+            <h3>No tasks yet</h3>
+            <p>Add a task above to get started!</p>
+        </div>
+        
+        <footer>
+            <p>Double-click a task to mark as complete • Click the delete button to remove</p>
+        </footer>
+    </div>
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>
